@@ -1,0 +1,192 @@
+:root {
+
+  /* Primary Colors */
+
+  --clr-primary-cyan: hsl(158, 36%, 37%);
+  --clr-primary-cream: hsl(30, 38%, 92%);
+
+  /* Neutral Colors */
+
+  --clr-neutral-dark-blue: hsl(212, 21%, 14%);
+  --clr-neutral-gray-blue: hsl(228, 12%, 48%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+
+  /* FONT */
+
+  --fs-regular: 0.875rem;
+
+  --ff-mont: "Montserrat", sans-serif;
+  --ff-frau: "Fraunces", serif;
+
+  --fw-medium: 500;
+  --fw-bold: 700; 
+
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: var(--ff-mont);
+  background-color: var(--clr-primary-cream);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--clr-neutral-white);
+  display: flex;
+  width: 720px;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.desktop-version {
+  width: 360px;
+  height: auto;
+}
+
+.mobile-version {
+  display: none;
+}
+
+.text {
+  padding: 30px;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: var(--fs-regular);
+  font-weight: var(--fw-medium);
+  color: var(--clr-neutral-gray-blue);
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-frau); 
+  line-height: 2.2rem;
+  padding-left: 5px;
+  margin-top: 25px;
+  color: var(--clr-neutral-dark-blue);
+}
+
+
+.info {
+  font-size: 1rem;
+  color: var(--clr-neutral-gray-blue);
+  font-size: var(--fs-regular);
+  margin: 0;
+  line-height: 1.3rem ;
+}
+
+.prices {
+  display: flex;
+}
+
+.main-price {
+  font-size: 1.8rem;
+  font-family: var(--ff-frau);
+  color: var(--clr-primary-cyan);
+  font-weight: var(--fw-bold);
+}
+
+.old-price {
+  font-size: var(--fs-regular);
+  color: var(--clr-neutral-gray-blue);
+  font-weight: var(--fw-medium);
+  text-decoration: line-through;
+  align-self: center;
+  padding: 20px
+}
+
+button {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  background-color: var(--clr-primary-cyan);
+  color: var(--clr-neutral-white);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-mont);
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.material-symbols-outlined {
+  padding-inline: 5px;
+}
+
+button:hover {
+  background-color: var(--clr-neutral-dark-blue);
+  cursor: pointer;
+}
+
+
+@media (max-width: 375px) {
+  body {
+  width: 100vh;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .card {
+    display: block;
+    background-color: var(--clr-neutral-white);
+    width: 325px;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .desktop-version {
+    display: none;
+  }
+
+  .mobile-version {
+    display: block;
+    width: 100%;
+    height: auto;   
+  }
+  
+  h1 {
+    font-size: 0.650rem;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-top: 15px;
+    padding-left: 0px;
+  }
+
+  .info {
+    font-size: 13px;
+    line-height: 1.2rem;
+  }
+
+  .main-price {
+    font-size: 1.4rem;
+  }
+
+  .old-price {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
